@@ -1,0 +1,71 @@
+<div class="container w-25 mt-5 ">
+    <h5 class="text-left">COMPANY INFORMATION</h5>
+    <form action="" [formGroup]="registerForm" (ngSubmit)="register()"  >
+
+            <div class="mb-2 p-2">
+                <label for="user">Name</label>
+                <input type="text" class="form-control" formControlName="uname"  name="uname" id="user" class="form-control" >
+        <!-- form-control makes you align the box to the container width -->
+            </div>
+            <!-- form validation -->
+            <div *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors" style="color: red;">Invalid username</div>
+
+             <div class="mb-2 p-2">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" formControlName="address"  name="address" id="address"class="form-control"> 
+             </div>
+             <div *ngIf="(this.registerForm.get('address')?.touched||this.registerForm.get('address')?.dirty)&&this.registerForm.get('address')?.errors" style="color: red;">Invalid address</div>
+
+             <div class="mb-2 p-2 gap-2">
+
+
+                <Table>
+                    <tr class="p-5">
+                        <td><label for="city">City</label></td>
+                        <td><label for="state">State</label></td>
+                        <td><label for="zip">Zip</label></td>
+                    </tr>
+                    <tr>
+                       <td><input type="text" class="form-control" formControlName="city"  name="city" id="city"class="form-control"> </td> 
+                       <div *ngIf="(this.registerForm.get('city')?.touched||this.registerForm.get('city')?.dirty)&&this.registerForm.get('city')?.errors" style="color: red;">Invalid city</div>
+
+
+                       <td> <input type="text" class="form-control" formControlName="state"  name="state" id="state"class="form-control"></td>
+                       <div *ngIf="(this.registerForm.get('state')?.touched||this.registerForm.get('state')?.dirty)&&this.registerForm.get('state')?.errors" style="color: red;">Invalid state</div>
+
+                       <td> <input type="text" class="form-control" formControlName="zip"  name="zip" id="zip"class="form-control"></td> 
+                       <div *ngIf="(this.registerForm.get('zip')?.touched||this.registerForm.get('zip')?.dirty)&&this.registerForm.get('zip')?.errors" style="color: red;">Invalid zip code</div>
+
+                    </tr>
+        
+                </Table>
+    
+         </div>
+         <div class="mb-2 p-2">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" formControlName="phone"  name="phone" id="phone"class="form-control"> 
+     </div>
+     <div *ngIf="(this.registerForm.get('phone')?.touched||this.registerForm.get('phone')?.dirty)&&this.registerForm.get('phone')?.errors" style="color: red;">Invalid phone</div>
+
+     <div class="mb-2 p-2">
+        <label for="website">Website</label>
+        <input type="url" class="form-control" formControlName="website"  name="website" id="website"class="form-control"> 
+ </div>
+ <div *ngIf="(this.registerForm.get('website')?.touched||this.registerForm.get('website')?.dirty)&&this.registerForm.get('website')?.errors" style="color: red;">Invalid website</div>
+
+ <div class="mb-2 p-2">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" formControlName="email"  name="email" id="email"class="form-control"> 
+</div>
+<div *ngIf="(this.registerForm.get('email')?.touched||this.registerForm.get('email')?.dirty)&&this.registerForm.get('email')?.errors" style="color: red;">Invalid email</div>
+
+           
+         <div class="d-grid gap-2 col-6 mx-auto" >
+            <!-- <input  type="submit" value="save profile" onsubmit="register()" routerLink="" class="btn float-right login_btn " style= "width:50%"  style="background-color: purple; border-radius: 25px; padding:5px; color: white;" >        -->
+<button style="background-color: purple;color: white; border-radius: 5px;" onclick="register()">save profile</button>
+         </div>
+           
+            
+       
+    </form>
+</div>

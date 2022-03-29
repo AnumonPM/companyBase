@@ -1,0 +1,71 @@
+<div class="container w-25 mt-5 ">
+    <h5 class="text-left">COMPANY INFORMATION</h5>
+    <form action="" [formGroup]="updateForm" (ngSubmit)="update()"  >
+
+            <div class="mb-2 p-2">
+                <label for="user">Name</label>
+                <input type="text" class="form-control" formControlName="uname"  name="uname" id="user" class="form-control" >
+        <!-- form-control makes you align the box to the container width -->
+            </div>
+            <!-- form validation -->
+            <div *ngIf="(this.updateForm.get('uname')?.touched||this.updateForm.get('uname')?.dirty)&&this.updateForm.get('uname')?.errors" style="color: red;">Invalid username</div>
+
+             <div class="mb-2 p-2">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" formControlName="address"  name="address" id="address"class="form-control"> {{updateInfo.address}}
+             </div>
+             <div *ngIf="(this.updateForm.get('address')?.touched||this.updateForm.get('address')?.dirty)&&this.updateForm.get('address')?.errors" style="color: red;">Invalid address</div>
+
+             <div class="mb-2 p-2 gap-2">
+
+
+                <Table>
+                    <tr class="p-5">
+                        <td><label for="city">City</label></td>
+                        <td><label for="state">State</label></td>
+                        <td><label for="zip">Zip</label></td>
+                    </tr>
+                    <tr>
+                       <td><input type="text" class="form-control" formControlName="city"  name="city" id="city"class="form-control">{{updateInfo.city}} </td> 
+                       <div *ngIf="(this.updateForm.get('city')?.touched||this.updateForm.get('city')?.dirty)&&this.updateForm.get('city')?.errors" style="color: red;">Invalid city</div>
+
+
+                       <td> <input type="text" class="form-control" formControlName="state"  name="state" id="state"class="form-control">{{updateInfo.state}}</td>
+                       <div *ngIf="(this.updateForm.get('state')?.touched||this.updateForm.get('state')?.dirty)&&this.updateForm.get('state')?.errors" style="color: red;">Invalid state</div>
+
+                       <td> <input type="text" class="form-control" formControlName="zip"  name="zip" id="zip"class="form-control">{{updateInfo.zip}}</td> 
+                       <div *ngIf="(this.updateForm.get('zip')?.touched||this.updateForm.get('zip')?.dirty)&&this.updateForm.get('zip')?.errors" style="color: red;">Invalid zip code</div>
+
+                    </tr>
+        
+                </Table>
+    
+         </div>
+         <div class="mb-2 p-2">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" formControlName="phone"  name="phone" id="phone"class="form-control"> {{updateInfo.phone}}
+     </div>
+     <div *ngIf="(this.updateForm.get('phone')?.touched||this.updateForm.get('phone')?.dirty)&&this.updateForm.get('phone')?.errors" style="color: red;">Invalid phone</div>
+
+     <div class="mb-2 p-2">
+        <label for="website">Website</label>
+        <input type="url" class="form-control" formControlName="website"  name="website" id="website"class="form-control">{{updateInfo.website}} 
+ </div>
+ <div *ngIf="(this.updateForm.get('website')?.touched||this.updateForm.get('website')?.dirty)&&this.updateForm.get('website')?.errors" style="color: red;">Invalid website</div>
+
+ <div class="mb-2 p-2">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" formControlName="email"  name="email" id="email"class="form-control"> {{updateInfo.email}}
+</div>
+<div *ngIf="(this.updateForm.get('email')?.touched||this.updateForm.get('email')?.dirty)&&this.updateForm.get('email')?.errors" style="color: red;">Invalid email</div>
+
+           
+         <div class="d-grid gap-2 col-6 mx-auto" >
+            <!-- <input  type="submit" value="save profile" onsubmit="register()" routerLink="" class="btn float-right login_btn " style= "width:50%"  style="background-color: purple; border-radius: 25px; padding:5px; color: white;" >        -->
+<button style="background-color: purple;color: white; border-radius: 5px;" onclick="update()">Update profile</button>
+         </div>
+           
+            
+       
+    </form>
+</div>

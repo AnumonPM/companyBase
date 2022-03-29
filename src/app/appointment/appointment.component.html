@@ -1,0 +1,89 @@
+    <div class="container" style="align-items: center; margin-top: 150px; justify-content: center; display: flex;">
+        <div class="row row-cols-4 row-cols-md-4 g-4">
+       
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body" style="align-items: center;">
+                        <h5 class="card-title">Sunday</h5>
+                            <li *ngFor="let res of sunTime">{{res }}</li> <br>
+                        <input type="time" [(ngModel)]="sunRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedSun()" >Add Time Slot</button>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Monday</h5>
+                        <li *ngFor="let res1 of monTime">{{res1}}</li> <br>
+                        <input type="time" [(ngModel)]="monRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedMon()" >Add Time Slot</button>
+    
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Tuesday</h5>
+                        <li *ngFor="let res of tueTime">{{res}}</li> <br>
+                        <input type="time" [(ngModel)]="tueRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedTue()" >Add Time Slot</button>
+    
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Wednesday</h5>
+                        <li *ngFor="let res of wedTime">{{res}}</li> <br>
+                        <input type="time" [(ngModel)]="wedRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedWed()" >Add Time Slot</button>
+    
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Thursday</h5>
+                        <li *ngFor="let res of thurTime">{{res}}</li> <br>
+                        <input type="time" [(ngModel)]="thurRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedThu()" >Add Time Slot</button>
+    
+    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Friday</h5>
+                        <li *ngFor="let res of friTime">{{res}}</li> <br>
+                        <input type="time" [(ngModel)]="friRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedFri()" >Add Time Slot</button>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="justify-content: space-evenly; display: flex;">
+                <div class="card w-75">
+                    <div class="card-body">
+                        <h5 class="card-title">Saturday</h5>
+                        <li *ngFor="let res of satTime">{{res}}</li> <br>
+                        <input type="time" [(ngModel)]="satRes" > <br> <br>
+                        <button style="background-color: purple; border-radius: 25px; padding:5px; color: white; " (click)="bookedSat()" >Add Time Slot</button>
+    
+    
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+<!-- </form> -->
